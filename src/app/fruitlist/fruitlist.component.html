@@ -1,3 +1,7 @@
-@for(item of fruitlist; track item.name; let last = $last){
-    <p>{{last}}: <b>{{item.name}}</b></p>
-}
+<div class="fruitlist_content">
+    @for(singlefruit of fruitlist; track singlefruit.name; let index = $index){
+    
+        <app-singlefruit (fruitname)="nameLog($event)" [fruit]="singlefruit"></app-singlefruit>
+        
+    }
+</div>
